@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container justify-content-md-center">
+        <div class="row">
+            <header class="col-12 text-center">
+
+                <h2>
+                    Logo
+                </h2>
+                <h2>
+                    navigation
+                </h2>
+            </header>
+        </div>
+        <div class="row justify-content-center mb-4">
+            <form action="#" onsubmit="return Client.handleSubmit(event)">
+                <div class="row mb-2">
+                    <label for="city" class="col-7">Please Enter Your distention</label>
+                    <input type="text" id="city-input" name="city" class="col-5" required>
+                </div>
+                <div class="row mb-2">
+                    <label for="city" class="col-7">Which Time You Want To Travel</label>
+                    <input type="date" id="date-input" name="date" class="col-5" required>
+                </div>
+                <div class="col-12 text-center">
+                    <input type="submit" value="Get The Data" class="btn btn-outline-primary btn-block btn-large">
+                </div>
+            </form>
+        </div>
+
+        <section id="cards">
+            <div class="row justify-content-around">
+                <div class="card mb-2" style="width: 18rem;">
+                    <img class="card-img-top" src="https://wallpapercave.com/wp/wp1825719.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                    </div>
+                </div>
+                <div class="card mb-2" style="width: 18rem;">
+                    <img class="card-img-top" src="https://wallpapercave.com/wp/wp1825719.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                    </div>
+                </div>
+                <div class="card mb-2" style="width: 18rem;">
+                    <img class="card-img-top" src="https://wallpapercave.com/wp/wp1825719.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!----- JS for bootstrap ----->
+    <script src="../"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

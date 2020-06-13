@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:8081/post"
+const BASE_URL = "http://localhost:8082/post"
 const handleSubmit = async (event) => {
   event.preventDefault();
   const city = document.querySelector("#city-input").value;

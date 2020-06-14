@@ -25,12 +25,31 @@
         <div class="row justify-content-center mb-4">
             <form action="#" onsubmit="return Client.handleSubmit(event)">
                 <div class="row mb-2">
-                    <label for="city" class="col-7">Please Enter Your distention</label>
-                    <input type="text" id="city-input" name="city" class="col-5" required>
+                    <div class="col-12 text-center">
+                        <label for="city"> Which City Do You Want To Travel For?</label>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <select class="custom-select" id="countries-list">
+                                <option selected value=-1>Choose Country...</option>
+                            </select>
+                        </div>
+                        <input type="text" id="city-input" name="city" class="form-control" aria-label="Text input with dropdown button" required>
+                    </div>
                 </div>
                 <div class="row mb-2">
-                    <label for="city" class="col-7">Which Time You Want To Travel</label>
-                    <input type="date" id="date-input" name="date" class="col-5" required>
+                    <div class="col-12 text-center">
+                        <label for="date"> Please Choose Your Travel Date</label>
+                    </div>
+                    <div class="col-12">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroup-sizing-default">Travel Date</span>
+                            </div>
+                            <input type="date" id="date-input" name="date" class="form-control" aria-label="Default"
+                                aria-describedby="inputGroup-sizing-default" required>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12 text-center">
                     <input type="submit" value="Get The Data" class="btn btn-outline-primary btn-block btn-large">
@@ -43,21 +62,24 @@
                 <div class="card mb-2" style="width: 18rem;">
                     <img class="card-img-top" src="https://wallpapercave.com/wp/wp1825719.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
                             card's content.</p>
                     </div>
                 </div>
                 <div class="card mb-2" style="width: 18rem;">
                     <img class="card-img-top" src="https://wallpapercave.com/wp/wp1825719.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
                             card's content.</p>
                     </div>
                 </div>
                 <div class="card mb-2" style="width: 18rem;">
                     <img class="card-img-top" src="https://wallpapercave.com/wp/wp1825719.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
                             card's content.</p>
                     </div>
                 </div>

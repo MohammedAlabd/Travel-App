@@ -5,10 +5,10 @@ const formValidate = (country) => {
 };
 
 const resetForm = () => {
-   document.querySelector("#city-input").value = ""
-   document.querySelector("#countries-list").value = ""
-   document.querySelector("#date-input").value = ""
-}
+  document.querySelector("#city-input").value = "";
+  document.querySelector("#countries-list").value = "";
+  document.querySelector("#date-input").value = "";
+};
 
 const handleSubmit = async (event) => {
   event.preventDefault();
@@ -17,7 +17,8 @@ const handleSubmit = async (event) => {
   const date = document.querySelector("#date-input").value;
 
   if (!formValidate(country)) {
-    return alert("please chose the country");
+    alert("please chose the country");
+    return 0 
   }
   console.log(city, country, date);
 
@@ -37,12 +38,12 @@ const handleSubmit = async (event) => {
     const json = await res.json();
     console.log(json);
     // Client.renderResults(json);
-    if(!json.state) {
-      alert(json.msg)
-      return 0
+    if (!json.state) {
+      alert(json.msg);
+      return 0;
     }
-    Client.renderTravelCard(json, date, city)
-    resetForm()
+    Client.renderTravelCard(json, date, city);
+    resetForm();
     return 1;
   } catch (error) {
     console.error("error", error);
@@ -51,6 +52,3 @@ const handleSubmit = async (event) => {
 };
 
 export { handleSubmit };
-
-// TODO
-// 1. don't take past date

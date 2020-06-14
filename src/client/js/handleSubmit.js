@@ -1,12 +1,21 @@
-const BASE_URL = "http://localhost:8082/post"
+const BASE_URL = "http://localhost:8083/post";
+
+const formValidate = (country) => {
+  return country === "-1" ? false : true
+}
+
 const handleSubmit = async (event) => {
   event.preventDefault();
   const city = document.querySelector("#city-input").value;
+  const country = document.querySelector("#countries-list").value;
   const date = document.querySelector("#date-input").value;
 
-  console.log(city.value, date.value);
+  if (!formValidate(country)){
+return alert("please chose the country")
+  } 
+  console.log(city, country, date);
 
-  const dataToPost = { city, date };
+  const dataToPost = { city, date, country };
 
   const optionJSON = {
     method: "POST",
@@ -20,7 +29,8 @@ const handleSubmit = async (event) => {
   const res = await fetch(BASE_URL, optionJSON);
   try {
     const json = await res.json();
-    Client.renderResults(json);
+    console.log(json)
+    // Client.renderResults(json);
     return 1;
   } catch (error) {
     console.error("error", error);
@@ -38,3 +48,6 @@ const handleSubmit = async (event) => {
 };
 
 export { handleSubmit };
+
+// TODO 
+// 1. don't take past date

@@ -52,7 +52,7 @@ const main = async (req, res) => {
     USERNAME
   );
   if (!coordinates) {
-    res.send(JSON.stringify({ state: "error", msg: "can't find this city" }));
+    res.send(JSON.stringify({ state: false, msg: "can't find this city" }));
     return;
   }
   const weatherData = await fetchWeather(coordinates, date, WETHERBIT_API_KEY);

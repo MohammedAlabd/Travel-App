@@ -34,7 +34,8 @@
                                 <option selected value=-1>Choose Country...</option>
                             </select>
                         </div>
-                        <input type="text" id="city-input" name="city" class="form-control" aria-label="Text input with dropdown button" required>
+                        <input type="text" id="city-input" name="city" class="form-control"
+                            aria-label="Text input with dropdown button" required>
                     </div>
                 </div>
                 <div class="row mb-2">
@@ -57,34 +58,12 @@
             </form>
         </div>
 
-        <section id="cards">
-            <div class="row justify-content-around">
-                <div class="card mb-2" style="width: 18rem;">
-                    <img class="card-img-top" src="https://wallpapercave.com/wp/wp1825719.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                    </div>
-                </div>
-                <div class="card mb-2" style="width: 18rem;">
-                    <img class="card-img-top" src="https://wallpapercave.com/wp/wp1825719.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                    </div>
-                </div>
-                <div class="card mb-2" style="width: 18rem;">
-                    <img class="card-img-top" src="https://wallpapercave.com/wp/wp1825719.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                    </div>
-                </div>
+        <section id="travel-cards">
+            <div id="cards-container" class="row justify-content-around">
+                <!--The Travel Cards Will Go here-->
             </div>
-        </section>
+    </div>
+    </section>
     </div>
     <!----- JS for bootstrap ----->
     <script src="../"></script>
@@ -97,6 +76,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
 </body>
 
 </html>

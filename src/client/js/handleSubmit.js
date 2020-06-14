@@ -1,7 +1,13 @@
 const BASE_URL = "http://localhost:8083/post";
 
 const formValidate = (country) => {
-  return country === "-1" ? false : true
+  return country === "-1" ? false : true;
+};
+
+const resetForm = () => {
+   document.querySelector("#city-input").value = ""
+   document.querySelector("#countries-list").value = ""
+   document.querySelector("#date-input").value = ""
 }
 
 const handleSubmit = async (event) => {
@@ -10,9 +16,9 @@ const handleSubmit = async (event) => {
   const country = document.querySelector("#countries-list").value;
   const date = document.querySelector("#date-input").value;
 
-  if (!formValidate(country)){
-return alert("please chose the country")
-  } 
+  if (!formValidate(country)) {
+    return alert("please chose the country");
+  }
   console.log(city, country, date);
 
   const dataToPost = { city, date, country };
@@ -29,25 +35,22 @@ return alert("please chose the country")
   const res = await fetch(BASE_URL, optionJSON);
   try {
     const json = await res.json();
-    console.log(json)
+    console.log(json);
     // Client.renderResults(json);
+    if(!json.state) {
+      alert(json.msg)
+      return 0
+    }
+    Client.renderTravelCard(json, date, city)
+    resetForm()
     return 1;
   } catch (error) {
     console.error("error", error);
     return 0;
   }
-  // console.log( date.value)
-  // let input = document.querySelector("#text").value;
-  // // check what text was put into the form field
-
-  // if (!formValidData(input)) {
-  //   alert("please enter an atrial of 10 words or more");
-  //   return 0;
-  // }
-  // console.log("::: Form Submitted :::");
 };
 
 export { handleSubmit };
 
-// TODO 
+// TODO
 // 1. don't take past date

@@ -22,7 +22,6 @@ import countries from "country-list-js";
     return 0;
   });
 
-  console.log(countriesArray);
   const renderCountries = () => {
     const countriesList = document.querySelector("#countries-list");
     countriesArray.forEach((country) => {

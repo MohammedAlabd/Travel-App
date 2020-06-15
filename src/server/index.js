@@ -58,9 +58,13 @@ const main = async (req, res) => {
   const weatherData = await fetchWeather(coordinates, date, WETHERBIT_API_KEY);
   let image = await fetchImage(city, BASE_PIXABAY_URL, PIXABAY_API_KEY);
   if (!image) {
-    image = await fetchImage(coordinates.adminName2, BASE_PIXABAY_URL, PIXABAY_API_KEY);
+    image = await fetchImage(
+      coordinates.adminName2,
+      BASE_PIXABAY_URL,
+      PIXABAY_API_KEY
+    );
   }
-  res.send(JSON.stringify({ image, weatherData }));
+  res.send(JSON.stringify({ image, weatherData, state: true }));
   console.log({ image, weatherData });
 };
 

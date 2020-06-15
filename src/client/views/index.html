@@ -10,62 +10,86 @@
 </head>
 
 <body>
-    <div class="container justify-content-md-center">
-        <div class="row">
-            <header class="col-12 text-center">
 
-                <h2>
-                    Logo
-                </h2>
-                <h2>
-                    navigation
-                </h2>
-            </header>
-        </div>
-        <div class="row justify-content-center mb-4">
-            <form action="#">
-                <div class="row mb-2">
-                    <div class="col-12 text-center">
-                        <label for="city-input"> Which City Do You Want To Travel For?</label>
-                    </div>
-                    <div class="input-group mb-3 mx-3 row">
-                        <div class="input-group-prepend col-12 col-sm-6 px-3 px-sm-0">
-                            <select class="custom-select" id="countries-list">
-                                <option selected value=-1>Choose Country...</option>
-                            </select>
-                        </div>
-                        <div class="col-12 col-sm-6 px-3 px-sm-0">
-                            <input type="text" id="city-input" placeholder="Enter the City" name="city"
-                                class="form-control" aria-label="Text input with dropdown button" required>
-                        </div>
-                    </div>
+    <div class="row mb-4">
+        <header class="col-12 text-center">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">TEW</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">You can Contact me on:</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/mohammed-alabd/">LinkedIN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" target="_blank" href="https://www.facebook.com/MohammedAlabd0">FaceBook</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" target="_blank" href="https://github.com/mohammedAlabd">GitHub</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">You can Visit:</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" target="_blank" href="https://mohammedalabd.github.io/portfolio/">My Portfolio</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="row mb-2">
-                    <div class="col-12 text-center">
-                        <label for="date-input"> Please Choose Your Travel Date</label>
-                    </div>
-                    <div class="col-12">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Travel Date</span>
-                            </div>
-                            <input type="date" id="date-input" name="date" class="form-control" aria-label="Default"
-                                aria-describedby="inputGroup-sizing-default" required>
-                        </div>
-                    </div>
-                </div>
+            </nav>
+            <h1>TWE Travel EveryWhere</h1>
+        </header>
+    </div>
+    <div class="container justify-content-md-center"></div>
+    <div class="row justify-content-center mb-4">
+        <form action="#">
+            <div class="row mb-2">
                 <div class="col-12 text-center">
-                    <input type="submit" value="Get The Data" class="btn btn-outline-primary btn-block btn-large">
+                    <label for="city-input"> Which City Do You Want To Travel For?</label>
                 </div>
-            </form>
-        </div>
-
-        <section id="travel-cards">
-            <h2 class="text-center"> Your Travel Cards </h2>
-            <div id="cards-container" class="row justify-content-around">
-                <!--The Travel Cards Will Go here-->
+                <div class="input-group mb-3 mx-3 row">
+                    <div class="input-group-prepend col-12 col-sm-6 px-3 px-sm-0">
+                        <select class="custom-select" id="countries-list">
+                            <option selected value=-1>Choose Country...</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-sm-6 px-3 px-sm-0">
+                        <input type="text" id="city-input" placeholder="Enter the City" name="city" class="form-control"
+                            aria-label="Text input with dropdown button" required>
+                    </div>
+                </div>
             </div>
-        </section>
+            <div class="row mb-2">
+                <div class="col-12 text-center">
+                    <label for="date-input"> Please Choose Your Travel Date</label>
+                </div>
+                <div class="col-12">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Travel Date</span>
+                        </div>
+                        <input type="date" id="date-input" name="date" class="form-control" aria-label="Default"
+                            aria-describedby="inputGroup-sizing-default" required>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 text-center">
+                <input type="submit" value="Get The Data" class="btn btn-outline-primary btn-block btn-large">
+            </div>
+        </form>
+    </div>
+
+    <section id="travel-cards">
+        <h2 class="text-center"> Your Travel Cards </h2>
+        <div id="cards-container" class="row justify-content-around">
+            <!--The Travel Cards Will Go here-->
+        </div>
+    </section>
     </div>
     <!-- JS for bootstrap -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

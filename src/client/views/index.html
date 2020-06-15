@@ -28,14 +28,16 @@
                     <div class="col-12 text-center">
                         <label for="city"> Which City Do You Want To Travel For?</label>
                     </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
+                    <div class="input-group mb-3 mx-3 row">
+                        <div class="input-group-prepend col-12 col-sm-6 px-3 px-sm-0">
                             <select class="custom-select" id="countries-list">
                                 <option selected value=-1>Choose Country...</option>
                             </select>
                         </div>
-                        <input type="text" id="city-input" name="city" class="form-control"
-                            aria-label="Text input with dropdown button" required>
+                        <div class="col-12 col-sm-6 px-3 px-sm-0">
+                            <input type="text" id="city-input" placeholder="Enter the City" name="city" class="form-control"
+                                aria-label="Text input with dropdown button" required>
+                        </div>
                     </div>
                 </div>
                 <div class="row mb-2">
@@ -66,7 +68,6 @@
     </section>
     </div>
     <!----- JS for bootstrap ----->
-    <script src="../"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -76,15 +77,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-        <script>
-            // Check that service workers are supported
-            if ('serviceWorker' in navigator) {
-                // Use the window load event to keep the page load performant
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/service-worker.js');
-                });
-            }
-        </script>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
 </body>
 
 </html>

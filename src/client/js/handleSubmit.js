@@ -37,7 +37,6 @@ const handleSubmit = async (event) => {
   try {
     const json = await res.json();
     console.log(json);
-    // Client.renderResults(json);
     if (!json.state) {
       alert(json.msg);
       return 0;
